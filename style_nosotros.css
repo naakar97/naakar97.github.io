@@ -1,0 +1,62 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    position: relative; /* Asegúrate de que el body sea relativo */
+    color: #ffffff; /* Color de texto blanco */
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover; /* Ajusta la imagen para cubrir el fondo */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* No repetir la imagen */
+    opacity: 0.7; /* Ajusta la opacidad */
+    z-index: -1; /* Coloca el fondo detrás del contenido */
+}
+
+header {
+    background:#6F5D44; /* Fondo semi-transparente para el header */
+    padding: 20px;
+    text-align: center;
+
+     /*menu css3generator*/
+     .css3-menu {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        background: #333;
+    }
+    
+    .css3-menu li {
+        display: inline-block;
+    }
+    
+    .css3-menu a {
+        display: block;
+        padding: 10px 20px;
+        color: #fff;
+        text-decoration: none;
+        transition: background 0.3s;
+    }
+    
+    .css3-menu a:hover {
+        background: #555; /* Color de fondo al pasar el ratón */
+    }
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
