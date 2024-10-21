@@ -1,27 +1,19 @@
 body {
     font-family: Arial, sans-serif;
+    background-image: url('imagen/background_nosotros.jpg');
     margin: 0;
     padding: 0;
-    position: relative; /* Asegúrate de que el body sea relativo */
-    color: #ffffff; /* Color de texto blanco */
-}
-
-body::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    position: bottom; /* Asegúrate de que el body sea relativo */
+    color:#ffffff; /* Color de texto */
     background-size: cover; /* Ajusta la imagen para cubrir el fondo */
-    background-position: center; /* Centra la imagen */
+    background-position: unset;
     background-repeat: no-repeat; /* No repetir la imagen */
     opacity: 0.7; /* Ajusta la opacidad */
     z-index: -1; /* Coloca el fondo detrás del contenido */
 }
 
 header {
-    background:#6F5D44; /* Fondo semi-transparente para el header */
+    background-color: rgb(73, 73, 73); /* Fondo semi-transparente para el header */
     padding: 20px;
     text-align: center;
 
@@ -30,7 +22,7 @@ header {
         list-style: none;
         padding: 0;
         margin: 0;
-        background: #333;
+        background: #ffffff;
     }
     
     .css3-menu li {
@@ -40,13 +32,13 @@ header {
     .css3-menu a {
         display: block;
         padding: 10px 20px;
-        color: #fff;
+        color: #000000;
         text-decoration: none;
         transition: background 0.3s;
     }
     
     .css3-menu a:hover {
-        background: #555; /* Color de fondo al pasar el ratón */
+        background: #ffffff; /* Color de fondo al pasar el ratón */
     }
 }
 
@@ -60,3 +52,50 @@ nav ul li {
     margin-right: 20px;
 }
 
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #333;
+    color: #fff;
+
+    .social-media {
+        margin-top: 10px;
+    }
+    
+    .social-media a {
+        color: #ffffff;
+        margin: 0 10px;
+        text-decoration: none;
+        font-size: 3em; /* Tamaño de los iconos */
+        transition: color 0.3s;
+    }
+    
+    .social-media a:hover {
+        color: #ddd; /* Color al pasar el ratón */
+    }
+    
+}
+
+/* Media Queries */
+@media (max-width: 600px) {
+    .product {
+        flex: 1 1 90%; /* Más ancho en pantallas pequeñas */
+        height: auto; /* Altura automática */
+    }
+
+    header {
+        padding: 10px;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1200px) {
+    .product {
+        flex: 1 1 45%; /* Dos productos en línea */
+    }
+}
+
+@media (min-width: 1201px) {
+    .product {
+        flex: 1 1 30%; /* Tres productos en línea */
+    }
+}

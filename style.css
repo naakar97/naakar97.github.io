@@ -6,12 +6,13 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    color: #fff;
+    color: #000000;
     height: 100vh; /* Mantiene la altura completa */
 }
 
 header {
     background: rgba(51, 51, 51, 0.8);
+    color: #fff;
     height: auto; /* Altura automática para más flexibilidad */
     padding: 20px;
     text-align: center;
@@ -93,7 +94,7 @@ nav a {
 .description {
     margin-top: 20px; /* Espacio entre la imagen y la descripción */
     color: #ffffff; /* Color del texto */
-    background: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente para mejor legibilidad */
+    background: rgb(255, 230, 230); /* Fondo semi-transparente para mejor legibilidad */
     padding: 10px;
     border-radius: 5px; /* Bordes redondeados */
 }
