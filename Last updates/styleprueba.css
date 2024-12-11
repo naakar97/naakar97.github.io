@@ -1,0 +1,179 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('imagen/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #333; /* Gris oscuro para el texto en lugar de negro */
+    height: 100vh; /* Mantiene la altura completa */
+}
+
+header {
+    background: rgba(34, 34, 34, 0.9); /* Fondo oscuro con algo de transparencia */
+    color: #f4f4f4; /* Color gris claro para el texto */
+    height: auto; /* Altura automática para más flexibilidad */
+    padding: 20px;
+    text-align: center;
+
+    /*menu css3generator*/
+    .css3-menu {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        background: #444; /* Fondo gris oscuro para el menú */
+    }
+
+    .css3-menu li {
+        display: inline-block;
+    }
+
+    .css3-menu a {
+        display: block;
+        padding: 10px 20px;
+        color: #f4f4f4; /* Texto en gris claro */
+        text-decoration: none;
+        transition: background 0.3s;
+    }
+
+    .css3-menu a:hover {
+        background: #666; /* Color de fondo más suave al pasar el ratón */
+    }
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a {
+    color: #f4f4f4; /* Texto gris claro */
+    text-decoration: none;
+}
+
+.product-slider {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.product-container {
+    display: flex;
+    transition: transform 0.3s ease;
+}
+
+.product {
+    flex: 100%; /* Cambia el porcentaje para el número de productos que quieres mostrar */
+    margin: 10px; /* Espacio entre productos */
+    text-align: center;
+    overflow: scroll;
+}
+
+.product:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.product img {
+    width: 100%; /* Llena el ancho del contenedor */
+    height: auto; /* Altura automática para mantener la proporción */
+    object-fit: contain;
+}
+
+.description {
+    margin-top: 20px; /* Espacio entre la imagen y la descripción */
+    color: #333; /* Texto en gris oscuro */
+    background: rgba(255, 255, 255, 0.85); /* Fondo claro pero no completamente blanco */
+    padding: 10px;
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+.prev, .next {
+    background-color: rgba(34, 34, 34, 0.7); /* Fondo oscuro pero no completamente negro */
+    color: #f4f4f4; /* Texto gris claro */
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    transition: background-color 0.3s;
+}
+
+/* Estilo para poner botones guays */
+.prev:hover, .next:hover {
+    background-color: rgba(34, 34, 34, 0.9); /* Fondo aún más oscuro al pasar el ratón */
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+section {
+    margin-bottom: 20px;
+    background: rgba(255, 255, 255, 0.9); /* Fondo claro pero no luminoso */
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #444; /* Fondo gris oscuro */
+    color: #f4f4f4; /* Texto gris claro */
+
+    .social-media {
+        margin-top: 10px;
+    }
+
+    .social-media a {
+        color: #f4f4f4; /* Color claro para los iconos */
+        margin: 0 10px;
+        text-decoration: none;
+        font-size: 1.5em; /* Tamaño de los iconos */
+        transition: color 0.3s;
+    }
+
+    .social-media a:hover {
+        color: #f5a623; /* Color naranja al pasar el ratón para un toque cálido */
+    }
+}
+
+/* Media Queries */
+@media (max-width: 600px) {
+    .product {
+        flex: 1 1 90%; /* Más ancho en pantallas pequeñas */
+        height: auto; /* Altura automática */
+    }
+
+    header {
+        padding: 10px;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1200px) {
+    .product {
+        flex: 1 1 45%; /* Dos productos en línea */
+    }
+}
+
+@media (min-width: 1201px) {
+    .product {
+        flex: 1 1 30%; /* Tres productos en línea */
+    }
+}

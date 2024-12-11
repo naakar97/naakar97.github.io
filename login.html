@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login y Register</title>
+    <link rel="icon" href="imagen/icono.ico" type="icono">
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+   <!-- Scripts de Firebase -->
+<!-- Agrega Firebase SDK a tu HTML -->
+<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"></script>
+<!-- Tu archivo JS como módulo -->
+<script type="module" src="login_firestore.js" defer></script>
+
+    
+</head>
+<header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="imagen/logoweb.jpg" alt="Logo de Tienda"></a>
+            </div>
+            <ul class="menu">
+                <li><a href="index.html">Inicio &#127968;</a></li>
+                <li><a href="/tienda">Tienda &#128178;</a>
+                    <ul class="submenu">
+                        <li><a href="/tienda/ropa">Ropa</a></li>
+                        <li><a href="/tienda/zapatillas">Zapatillas</a></li>
+                        <li><a href="/tienda/tablas">Tablas de Skate</a></li>
+                    </ul>
+                <li><a href="/colecciones">Colecciones &#128085;</a></li>
+                <li><a href="sobre_nosotros.html">Nuestra Historia &#128214;</a></li>
+                <li><a href="login.html" title="Iniciar sesión">Iniciar Sesión👤</a></li>
+            </ul>
+        </nav>
+</header>
+<body>
+
+        <main>
+
+            <div class="contenedor__todo">
+                <div class="caja__trasera">
+                    <div class="caja__trasera-login">
+                        <h3>¿Ya tienes una cuenta?</h3>
+                        <p>Inicia sesión para entrar en la página</p>
+                        <button id="btn__iniciar-sesion">Iniciar Sesión</button>
+                    </div>
+                    <div class="caja__trasera-register">
+                        <h3>¿Aún no tienes una cuenta?</h3>
+                        <p>Regístrate para que puedas iniciar sesión</p>
+                        <button id="btn__registrarse">Regístrarse</button>
+                    </div>
+                </div>
+
+                <!--Formulario de Login y registro-->
+                <div class="contenedor__login-register">
+           <!--Login-->
+            <form action="" class="formulario__login">
+                <h2>Iniciar Sesión</h2>
+                <label for="login-email">Correo Electrónico</label>
+                <input type="email" id="login-email" placeholder="Correo Electrónico" required>
+                <label for="login-password">Contraseña</label>
+                <div class="password-container">
+                    <input type="password" id="login-password" placeholder="Contraseña" required>
+                    <span id="toggle-password-login" class="toggle-password">👁️</span>
+                </div>
+                <button type="submit">Entrar</button>
+            </form>
+
+            <!--Registro-->
+            <form action="" class="formulario__register">
+                <h2>Regístrarse</h2>
+                <label for="register-name">Nombre completo</label>
+                <input type="text" id="register-name" placeholder="Nombre completo" required>
+                <label for="register-email">Correo Electrónico</label>
+                <input type="email" id="register-email" placeholder="Correo Electrónico" required>
+                <label for="register-username">Usuario</label>
+                <input type="text" id="register-username" placeholder="Usuario" required>
+                <label for="register-password">Contraseña</label>
+                <div class="password-container">
+                    <input type="password" id="register-password" placeholder="Contraseña" required>
+                    <span id="toggle-password-register" class="toggle-password">👁️</span>
+                </div>
+                <div class="password-container">
+                <input type="password2" id="register-password2" placeholder="Repita Contraseña" required>
+                    <span id="toggle-password-register2" class="toggle-password">👁️</span>
+                </div>
+                <button type="submit">Regístrarse</button>
+</form>
+
+        </main>
+
+        <script src="login.js"></script>
+</body>
+<footer>
+    <p>&copy; 2024 Urban Rolling. Todos los derechos reservados.</p>
+    <div class="social-media">
+        <a href="https://www.facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.twitter.com" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.youtube.com" target="_blank" aria-label="youtube"><i class="fab fa-youtube"></i></a>
+    </div>
+</footer>
+</html>

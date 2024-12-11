@@ -1,0 +1,222 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('imagen/fondoindex.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: auto;
+}
+
+header {
+    background: rgba(51, 51, 51, 0.8);
+    color: #fff;
+    height: auto; /* Altura automática para más flexibilidad */
+    padding: 20px;
+    text-align: center;
+
+           /*menu css3generator*/
+           .css3-menu {
+            list-style: none;
+            padding: 0;
+            margin-right: auto;
+            margin-left: auto;
+            background: #333;
+            max-width: 30%;
+            align-items: center;
+            display: block;
+            border-radius: 3rem;
+        }
+        
+        .css3-menu li {
+            display: inline-block;
+        }
+        
+        .css3-menu a {
+            display: block;
+            padding: 10px 20px;
+            color: #fff;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+        
+        .css3-menu a:hover {
+            background: #555; /* Color de fondo al pasar el ratón */
+        }
+        
+    
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.slider {
+    position: relative;
+    height: 100%;
+    display: flex;
+    margin-top: 50px;
+    width: 100%;
+    gap: 20px;
+    transition: transform ease 0.2s;
+  }
+  
+  .slide {
+    transition: transform ease 0.2s, opacity ease 0.2s;
+    opacity: 0.5;
+  }
+  
+  .slide.active {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  
+  .slider-wrapper {
+    position: relative;
+  }
+  
+  .prev-button {
+    position: absolute;
+    top: 50%;
+    left: -55px;
+    z-index: 1;
+  }
+  
+  .next-button {
+    position: absolute;
+    top: 50%;
+    right: -55px;
+    z-index: 1;
+  }
+
+.product-container {
+    display: flex;
+    transition: transform 0.3s ease;
+}
+
+/* Cambiar productos*/
+.product {
+    flex: auto; /* Cambia el porcentaje para el número de productos que quieres mostrar */
+    margin: 10px; /* Espacio entre productos */
+    text-align: center;
+    overflow:visible; /*Formato de cuadro dentro de producto*/
+    
+}
+/* Como se ven las imagenes */
+.product img {
+    width: 100%; /* Llena el ancho del contenedor */
+    height: 80%; /* Altura automática para mantener la proporción */
+    object-fit:cover;
+}
+/*Efecto al pasar raton por la imagen*/
+.product:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/*Descripcion debajo de las tablas*/
+.description {
+    margin-top: 20px; /* Espacio entre la imagen y la descripción */
+    color: #000000; /* Color del texto */
+    background: rgb(120, 120, 120); /* Fondo semi-transparente para mejor legibilidad */
+    padding: 10px;
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+/*Botones de slider */
+.prev, .next {
+    background-color: rgba(48, 47, 47, 0.7);
+    color: rgb(255, 255, 255);
+    width: 50px;
+    height: 40px;
+    cursor: pointer;
+    position:absolute;
+    top: 55%; /* Ubicacion de flechas*/
+    z-index: 10;
+}
+
+    /*Estilo para poner sombras en botones */
+    
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.prev {
+    left: 20px;
+}
+
+.next {
+    right: 20px;
+}
+
+/*fondo de las tablas*/
+section { 
+    margin-bottom: 20px;
+    background: rgba(190, 177, 177, 0.8); /* Fondo semi-transparente */
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgb(255, 255, 255);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(51, 51, 51, 0.8);
+    color: #fff;
+
+    .social-media {
+        margin-top: 10px;
+    }
+    
+    .social-media a {
+        color: #fff;
+        margin: 0 10px;
+        text-decoration: none;
+        font-size: 1.5em; /* Tamaño de los iconos */
+        transition: color 0.3s;
+    }
+    
+    .social-media a:hover {
+        color: #ddd; /* Color al pasar el ratón */
+    }
+    
+}
+
+#map {
+    height: 500px; /* Aumenté la altura para asegurarme que sea visible */
+    width: 100%;
+}
+
+/* Media Queries */
+@media (max-width: 600px) {
+    .product {
+        flex: 1 1 90%; /* Más ancho en pantallas pequeñas */
+        height: auto; /* Altura automática */
+    }
+
+    header {
+        padding: 10px;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1200px) {
+    .product {
+        flex: 1 1 45%; /* Dos productos en línea */
+    }
+}
+
+@media (min-width: 1201px) {
+    .product {
+        flex: 1 1 30%; /* Tres productos en línea */
+    }
+}

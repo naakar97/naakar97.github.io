@@ -1,0 +1,159 @@
+/* Reset de márgenes y padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilo para el fondo de la página */
+body {
+    background-image: url(imagen/fondoabout.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    color: #d1d1d1;
+    font-size: 16px;
+    line-height: 1.5;
+    min-height: 100vh;
+    /* Asegura que el body ocupe toda la altura de la pantalla */
+    position: relative;
+    /* Necesario para que los elementos hijos se posicionen correctamente */
+}
+
+/* Agregar capa oscura sobre la imagen de fondo */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    /* Fondo negro semitransparente */
+    z-index: -1;
+    /* Asegura que esté detrás del contenido */
+}
+
+/* Contenido principal */
+main {
+    width: 100%;
+    padding: 20px;
+    margin: auto;
+    margin-top: 70px;
+    text-align: center;
+    z-index: 1;
+    /* Asegura que esté sobre el fondo */
+}
+
+/* Estilo del header */
+header {
+    background: rgba(51, 51, 51, 0.8);
+    /* Fondo oscuro para el header */
+    color: #fff;
+    padding: 20px 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    /* Sombra suave */
+}
+
+header h1 {
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+    /* Espaciado entre letras */
+}
+
+/* Menú de navegación */
+/*menu css3generator*/
+.css3-menu {
+    list-style: none;
+    padding: 0;
+    margin-right: auto;
+    margin-left: auto;
+    background: #333;
+    max-width: 30%;
+    align-items: center;
+    display: block;
+    border-radius: 3rem;
+}
+
+.css3-menu li {
+    display: inline-block;
+}
+
+.css3-menu a {
+    display: block;
+    padding: 10px 20px;
+    color: #fff;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.css3-menu a:hover {
+    background: #555;
+    /* Color de fondo al pasar el ratón */
+}
+
+/* Estilo para el footer */
+footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(51, 51, 51, 0.8);
+    color: white;
+    text-align: center;
+    padding: 64px 30px;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.3);
+}
+
+footer .social-media {
+    margin-top: 20px;
+}
+
+footer .social-media a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 1.8em;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+footer .social-media a:hover {
+    color: #ddd;
+    transform: scale(1.2);
+    /* Efecto de agrandamiento en hover */
+}
+
+/* Media Queries para pantallas pequeñas */
+@media screen and (max-width: 850px) {
+    main {
+        margin-top: 50px;
+        padding: 15px;
+    }
+
+    .caja__trasera {
+        max-width: 350px;
+        height: auto;
+        flex-direction: column;
+        margin: auto;
+    }
+
+
+    /* Menú en pantallas pequeñas */
+    .css3-menu {
+        display: block;
+    }
+
+    .css3-menu li {
+        display: block;
+        text-align: center;
+        margin: 5px 0;
+    }
+
+    .css3-menu a {
+        padding: 10px;
+        font-size: 1.2rem;
+    }
+}

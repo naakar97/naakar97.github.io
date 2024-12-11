@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Header */
+header {
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px 0;
+}
+
+.navbar {
+    display: flex;
+    align-items: center; /* Alinea verticalmente los elementos */
+    padding: 0 30px;
+}
+
+.navbar img {
+    height: 90px;  /* Ajusta la altura según lo necesites */
+    width: auto;
+}
+
+.navbar .logo a {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center; /* Centra el logo verticalmente */
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin-left: 30px; /* Añade un poco de espacio entre el logo y el menú */
+}
+
+.menu li {
+    position: relative;
+}
+
+.menu a {
+    font-size: 16px;
+    color: #333;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.menu a:hover {
+    color: #d32f2f;
+    border-bottom: 2px solid #d32f2f;
+}
+
+/* Submenú */
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 10px 0;
+    min-width: 200px;
+    z-index: 10;
+}
+
+.menu li:hover .submenu {
+    display: block;
+}
+
+.submenu a {
+    padding: 10px 20px;
+    color: #333;
+    text-transform: none;
+}
+
+.submenu a:hover {
+    background-color: #f5f5f5;
+}
+
+/* Banner
+.banner {
+    text-align: center;
+    padding: 80px 0;
+    background-color: #f5f5f5;
+}
+
+.banner h1 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.banner p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 40px;
+} */
+
+.cta-button {
+    padding: 12px 30px;
+    background-color: #d32f2f;
+    color: #fff;
+    font-size: 18px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #c2185b;
+}
+
+body {
+    background-color: #fff;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+        header {
+            background-color: #fff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding: 1em;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        section {
+            max-width: 1200px;
+            margin: 2em auto;
+            padding: 2em;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #2d2d2d;
+            font-size: 2em;
+        }
+
+        p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin-bottom: 1.5em;
+        }
+
+        .timeline {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .timeline li {
+            display: flex;
+            margin-bottom: 2em;
+            align-items: center;
+        }
+
+        .timeline li .year {
+            font-weight: bold;
+            font-size: 1.5em;
+            width: 120px;
+            text-align: center;
+            background-color: #111;
+            color: #fff;
+            padding: 0.5em;
+            border-radius: 5px;
+            margin-right: 20px;
+        }
+
+        .timeline li .event {
+            flex: 1;
+        }
+
+       
+/* Footer */
+footer {
+    background-color: #f5f5f5;
+    color: #333;
+    text-align: center;
+    padding: 1em;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+footer p {
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+}
+
+.social-media a {
+    margin: 0 10px;
+    color: #333;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+    color: #d32f2f;
+}
+
+/* Media Queries */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .css3-menu {
+        flex-direction: column;
+    }
+
+    .css3-menu a {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1200px) {
+    .css3-menu a {
+        font-size: 16px;
+    }
+
+    header h1 {
+        font-size: 32px;
+    }
+}
