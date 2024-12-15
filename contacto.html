@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_contacto.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <title>Contacto</title>
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="imagen/logoweb.jpg" alt="Logo de Tienda"></a>
+            </div>
+            <ul class="menu">
+                <li><a href="index.html">Inicio <i class="fas fa-home"></i></a></li>
+                <li><a href="juego.html">Juego 🎮</a>
+                    <!-- <ul class="submenu">
+                        <li><a href="/tienda/ropa">Ropa</a></li>
+                        <li><a href="/tienda/zapatillas">Zapatillas</a></li>
+                        <li><a href="/tienda/tablas">Tablas de Skate</a></li>
+                    </ul> -->
+                <li><a href="contacto.html">Contactanos👤</a></li>
+                <li><a href="sobre_nosotros.html">Nuestra Historia &#128214;</a></li>
+                <li><a href="login.html" title="Iniciar sesión">Iniciar Sesión &#128275;</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>Formulario de Contacto</h2>
+
+        <form action="" method="POST">
+            <div class="form-group">
+                <label for="name">Nombre Completo</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Correo Electrónico</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="subject">Asunto</label>
+                <input type="text" id="subject" name="subject" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Mensaje</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+
+            <button type="submit">Enviar</button>
+        </form>
+
+        <!-- Título y mapa -->
+        <div class="Mapa">
+            <h1>Ubicación de Nuestra Tienda en Urban Rolling</h1>
+            <div id="map"></div>
+        </div>
+
+        <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+        <script src="apis.js"></script>
+
+        <footer>
+            <p>&copy; 2024 Urban Rolling. Todos los derechos reservados.</p>
+            <div class="social-media">
+                <a href="https://www.facebook.com" target="_blank" aria-label="Facebook"><i
+                        class="fab fa-facebook"></i></a>
+                <a href="https://www.twitter.com" target="_blank" aria-label="Twitter"><i
+                        class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com" target="_blank" aria-label="Instagram"><i
+                        class="fab fa-instagram"></i></a>
+                <a href="https://www.youtube.com" target="_blank" aria-label="youtube"><i
+                        class="fab fa-youtube"></i></a>
+            </div>
+        </footer>
+
+</body>
+
+</html>

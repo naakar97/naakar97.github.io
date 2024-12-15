@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Header */
+header {
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px 0;
+}
+
+.navbar {
+    display: flex;
+    align-items: center; /* Alinea verticalmente los elementos */
+    padding: 0 30px;
+}
+
+.navbar img {
+    height: 90px;  /* Ajusta la altura según lo necesites */
+    width: auto;
+}
+
+.navbar .logo a {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center; /* Centra el logo verticalmente */
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin-left: 30px; /* Añade un poco de espacio entre el logo y el menú */
+}
+
+.menu li {
+    position: relative;
+}
+
+.menu a {
+    font-size: 16px;
+    color: #333;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.menu a:hover {
+    color: #d32f2f;
+    border-bottom: 2px solid #d32f2f;
+}
+
+/* Submenú */
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 10px 0;
+    min-width: 200px;
+    z-index: 10;
+}
+
+.menu li:hover .submenu {
+    display: block;
+}
+
+.submenu a {
+    padding: 10px 20px;
+    color: #333;
+    text-transform: none;
+}
+
+.submenu a:hover {
+    background-color: #f5f5f5;
+} 
+ 
+ /* Resetear márgenes y paddings por defecto */
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.contact-container {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Estilos para la sección del formulario */
+.contact-form {
+    flex: 1;
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 8px;
+    display: block;
+}
+
+input[type="text"], input[type="email"], textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+textarea {
+    resize: vertical;
+    height: 150px;
+}
+
+button {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.Mapa {
+    display: grid; /*Se aplica al contenedor de los elementos. Esto convierte al contenedor en un grid que organiza sus elementos hijos en una cuadrícula.*/
+    place-items: center;
+    text-align: center; /* Asegura que el texto se centre dentro del h1 */
+}
+
+/* Ajuste para el mapa */
+#map {
+    width: 100%; /* Ancho 100% de su contenedor, pero limitado por max-width */
+    height: 350px; /* Altura ajustada para que sea proporcional */
+    margin: 20px auto; /* Centra el mapa en la página */
+    border-radius: 8px; /* Bordes redondeados para el mapa */
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: #f5f5f5; /* Fondo claro para un estilo más minimalista */
+    color: #333; /* Texto oscuro para una mejor legibilidad */
+    text-align: center;
+    padding: 1em;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+footer p {
+    font-size: 14px;
+    color: #666; /* Un color más suave para el texto */
+    margin: 0; /* Elimina margen adicional */
+}
+
+/* Media Queries */
+@media (max-width: 600px) {
+    .product {
+        flex: 1 1 90%; /* Más ancho en pantallas pequeñas */
+        height: auto; /* Altura automática */
+    }
+
+    header {
+        padding: 10px;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1200px) {
+    .product {
+        flex: 1 1 45%; /* Dos productos en línea */
+    }
+}
+
+@media (min-width: 1201px) {
+    .product {
+        flex: 1 1 30%; /* Tres productos en línea */
+    }
+}
